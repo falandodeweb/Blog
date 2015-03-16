@@ -1,0 +1,112 @@
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Falando de web.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Falando de web.pdb
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Antlr3.Runtime.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\EntityFramework.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Meleze.Web.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Microsoft.Web.Infrastructure.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Newtonsoft.Json.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Helpers.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Mvc.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Optimization.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Razor.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.WebPages.Deployment.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.WebPages.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.WebPages.Razor.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\WebGrease.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Antlr3.Runtime.pdb
+E:\Copy\Weblite\Falando de web\Falando de web\bin\EntityFramework.xml
+E:\Copy\Weblite\Falando de web\Falando de web\bin\Newtonsoft.Json.xml
+E:\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Optimization.xml
+E:\Copy\Weblite\Falando de web\Falando de web\obj\Debug\Falando de web.csprojResolveAssemblyReference.cache
+E:\Copy\Weblite\Falando de web\Falando de web\obj\Debug\Falando de web.dll
+E:\Copy\Weblite\Falando de web\Falando de web\obj\Debug\Falando de web.pdb
+E:\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.Mvc.dll
+E:\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.pdb
+E:\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.xml
+E:\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.Mvc.pdb
+E:\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.Mvc.xml
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Falando de web.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Falando de web.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Antlr3.Runtime.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\EntityFramework.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Meleze.Web.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Newtonsoft.Json.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.Mvc.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Helpers.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Mvc.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Optimization.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Razor.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.WebPages.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.WebPages.Razor.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\WebGrease.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Antlr3.Runtime.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\EntityFramework.xml
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\Newtonsoft.Json.xml
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.xml
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.Mvc.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\PagedList.Mvc.xml
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\bin\System.Web.Optimization.xml
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\obj\Debug\Falando de web.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\obj\Debug\Falando de web.dll
+C:\Users\Felipe\Copy\Weblite\Falando de web\Falando de web\obj\Debug\Falando de web.pdb
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Falando de web.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Falando de web.pdb
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Antlr3.Runtime.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\EntityFramework.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Meleze.Web.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Microsoft.Web.Infrastructure.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Newtonsoft.Json.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.Mvc.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Helpers.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Mvc.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Optimization.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Razor.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.WebPages.Deployment.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.WebPages.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.WebPages.Razor.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\WebGrease.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Antlr3.Runtime.pdb
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\EntityFramework.xml
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Newtonsoft.Json.xml
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.pdb
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.xml
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.Mvc.pdb
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.Mvc.xml
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Optimization.xml
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\obj\Debug\Falando de web.csprojResolveAssemblyReference.cache
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\obj\Debug\Falando de web.dll
+E:\Copy\Weblite\Falando de Web\Blog\Falando de web\obj\Debug\Falando de web.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Falando de web.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Falando de web.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Antlr3.Runtime.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\EntityFramework.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Meleze.Web.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Newtonsoft.Json.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.Mvc.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Helpers.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Mvc.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Optimization.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Razor.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.WebPages.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.WebPages.Razor.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\WebGrease.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Antlr3.Runtime.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\EntityFramework.xml
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\Newtonsoft.Json.xml
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.xml
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.Mvc.pdb
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\PagedList.Mvc.xml
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\bin\System.Web.Optimization.xml
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\obj\Debug\Falando de web.csprojResolveAssemblyReference.cache
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\obj\Debug\Falando de web.dll
+C:\Users\Felipe\Copy\Weblite\Falando de Web\Blog\Falando de web\obj\Debug\Falando de web.pdb

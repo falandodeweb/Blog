@@ -1,0 +1,214 @@
+﻿@using System.Web.Optimization
+@using Falando_de_web.Models.Entidade
+@{ 
+    var url = Request.Url.AbsolutePath.ToLower();
+    var seo = ViewBag.Master.SEO;
+    var header = ViewBag.Master.Header;
+    var img = "http://assets.falandodeweb.com.br/wallpapers/" + header.Wallpaper + "-og.jpg";
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"  />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Lora:400,700,400italic,700italic|Lobster" rel="stylesheet" />
+    @Styles.Render("~/css")
+    
+    <title>@Html.Raw(seo.Title)</title>
+    
+    <meta charset="UTF-8" />
+    <meta name="author" content="Weblite Soluções Multimídia" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 day" />
+    
+    <meta name="description" content="@Html.Raw(seo.Description)" />
+    
+    @if (!string.IsNullOrWhiteSpace(seo.Keywords))
+    {
+        <meta name="keywords" content="@Html.Raw(seo.Keywords)" />
+    }
+    
+    <meta name="DC.title" content="Falando de Web" />
+    <meta name="geo.region" content="BR-PR" />
+    <meta name="geo.placename" content="Londrina" />
+    <meta name="geo.position" content="-23.31;-51.17" />
+    <meta name="ICBM" content="-23.31, -51.17" />
+    
+    <meta property="fb:admins" content="100002523071491" />
+    <meta property="og:title" content="@Html.Raw(seo.Title)" />
+    <meta property="og:description" content="@Html.Raw(seo.Description)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Falando de Web" />
+    <meta property="og:image" content="@img" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1009" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@("@falandodew3b")" />
+    <meta name="twitter:title" content="@Html.Raw(seo.Title)" />
+    <meta name="twitter:description" content="@Html.Raw(seo.Description)" />
+    <meta name="twitter:image" content="@img" />
+    <meta name="twitter:url" content="@url" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link href="@Url.Content("~/content/layout/imagens/icon.ico")" type="image/x-icon" rel="icon" />
+    <link href="@Url.Content("~/content/layout/imagens/icon.ico")" type="image/x-icon" rel="shortcut icon" />
+</head>
+<body>
+    <div id="fb-root"></div>
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="sr-only">Navagação</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Content("~/")">Falando de Web</a>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="@Url.Content("~/sobre")">Sobre</a></li>
+                    <li><a href="@Url.Content("~/junte-se")">Junte-se!</a></li>
+                    <li><a href="@Url.Content("~/contato")">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @{
+        var style = string.Empty;
+        
+        if(!cSistema.VerificarSeMobile())
+        {
+            string b = Url.Content("~/assets/wallpapers/" + header.Wallpaper + ".jpg");
+            style = "background: url(" + b + ") no-repeat center 0px;";
+        }
+    }
+    <header class="intro-header" style="@style">
+        <div class="header-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    @if (ViewBag.Post == null)
+                    {
+                        <div class="site-heading">
+                            <h1>@header.Titulo</h1>
+                            <hr class="small">
+                            <span class="subheading">@header.Subtitulo</span>
+                        </div>
+                    }
+                    else
+                    {
+                        var post = (Post)ViewBag.Post;
+                        
+                        <div class="post-heading">
+                            <h1 class="text-center">@post.Titulo</h1>
+                            @if (!string.IsNullOrWhiteSpace(post.Subtitulo))
+                            {
+                                <h2 class="subheading text-center">@post.Subtitulo</h2>
+                            }
+                            <span class="meta text-center">Postado por <a href="@Url.Content("~/autor/" + post.Usuario + "/" + cUtil.RemoverAcento(post.Usuario1.Nome, false))">@post.Usuario1.Nome</a> em @post.DataPublicacao.ToString("dd 'de' MMMM 'de' yyyy")</span>
+                            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                                <a class="addthis_button_facebook"></a>
+                                <a class="addthis_button_twitter"></a>
+                                <a class="addthis_button_whatsapp"></a>
+                                <a class="addthis_button_google_plusone_share"></a>
+                                <a class="addthis_button_linkedin"></a>
+                                <a class="addthis_button_favorites"></a>
+                                <a class="addthis_button_email"></a>
+                            </div>
+                        </div>   
+                    }
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <hr />
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li><a href="https://www.facebook.com/WebLiteNet" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a></li>
+                        <li><a href="https://www.twitter.com/falandodew3b" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a></li>
+                        <li><a href="https://github.com/falandodeweb" target="_blank"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a></li>
+                    </ul>
+                    <p class="copyright text-muted">Falando de Web &copy; @DateTime.Now.Year. Projeto criado e mantido por <a href="http://www.weblitesolucoes.com.br" target="_blank">Weblite Soluções Multimídia Ltda.</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    @if (ViewBag.Post != null)
+    {
+        <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54e67c243e8431a1" async></script>
+    }
+    @Scripts.RenderFormat("<script src='{0}' async></script>", "~/js")
+    @if (ViewBag.Protocolo != null)
+    {
+        <div class="modal fade" id="mod-protocolo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Formulário enviado!</h4>
+                    </div>
+                    <div class="modal-body">
+                        @Html.Raw(ViewBag.Protocolo)
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-check-circle"></i> OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#mod-protocolo').modal('show');
+        </script>
+    }
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-58803231-4', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1376949519289479',
+                xfbml: true,
+                version: 'v2.2'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+</body>
+</html>

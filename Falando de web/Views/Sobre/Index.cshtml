@@ -1,0 +1,18 @@
+﻿@using Falando_de_web.Models.Entidade
+
+<article>
+    @Html.Raw(ViewBag.Texto)
+    <h3 class="section-heading autor">Quem faz</h3>
+    <ul class="ul-autor">
+        @foreach (var autor in (List<Usuario>)ViewBag.Autor)
+        {
+            <li>
+                @*<img src="@("http://assets.falandodeweb.com.br/usuarios/" + autor.Codigo + ".jpg")" alt="@autor.Nome" title="@autor.Nome" class="img-circle tooltipster" />*@
+                <img src="@Url.Content("~/assets/usuarios/" + autor.Codigo + ".jpg")" alt="@autor.Nome" title="@autor.Nome" class="img-circle tooltipster" />
+            </li>
+        }
+    </ul>
+    <div class="row text-center">
+        <a class="btn btn-default" href="@Url.Content("~/junte-se")">Faça parte desta equipe!</a>
+    </div>
+</article>

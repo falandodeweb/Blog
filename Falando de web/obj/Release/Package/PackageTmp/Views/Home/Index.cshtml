@@ -1,0 +1,51 @@
+﻿@using Falando_de_web.Models.Entidade
+@using PagedList.Mvc;
+@using PagedList;
+
+@foreach(var post in ViewBag.Lista)
+{
+    <article class="post-preview">
+        <small class="post-meta"><i class="fa fa-flag-o"></i> <a href="@Url.Content("~/categoria/" + post.Categoria + "/" + cUtil.RemoverAcento(post.Categoria1.Titulo, false))">@post.Categoria1.Titulo</a></small>
+        <a href="@Url.Content("~/post/" + post.Codigo + "/" + cUtil.RemoverAcento(post.Titulo, false))">
+            <h2 class="post-title">@post.Titulo</h2>
+            @if (!string.IsNullOrWhiteSpace(post.Subtitulo))
+            {
+                <h3 class="post-subtitle">@post.Subtitulo</h3>
+            }
+            <small class="post-meta"><i class="fa fa-comment-o"></i> <fb:comments-count href="http://www.falandodeweb.com.br/post/@post.Codigo"></fb:comments-count></small>
+        </a>
+        @*<p class="post-meta"><i class="fa fa-bullhorn"></i> Postado por <a href="@Url.Content("~/autor/" + post.Usuario + "/" + cUtil.RemoverAcento(post.Usuario1.Nome, false))">@post.Usuario1.Nome</a> em @post.DataPublicacao.ToString("dd 'de' MMMM 'de' yyyy")</p>*@
+    </article>
+    <hr />
+}
+
+@{
+    var page = (IPagedList)ViewBag.Lista;
+    int index = page.PageIndex;
+}
+
+@if(page.PageCount > 1)
+{
+    <ul class="pager">
+        @if (page.HasPreviousPage)
+        {
+            string link = Url.Action("Index", new { page = (page.PageIndex - 1) });
+
+            if (link.ToLower().Contains("/pagina/0"))
+            {
+                link = Request.Url.ToString().ToLower().Replace("/pagina/1", string.Empty);
+            }
+            
+            <li class="previous">
+                <a href="@link"><i class="fa fa-caret-left"></i> Mais recentes</a>
+            </li>
+        }
+    
+        @if (page.HasNextPage)
+        {
+            <li class="next">
+                <a href="@Url.Action("Index", new { page = (index + 1) })">Mais antigos <i class="fa fa-caret-right"></i></a>
+            </li>
+        }
+    </ul>
+}

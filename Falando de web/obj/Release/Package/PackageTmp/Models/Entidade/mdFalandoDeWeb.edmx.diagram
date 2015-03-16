@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="57e84acc009d41fd8e50bea17311bcb0" Name="Diagram1">
+        <EntityTypeShape EntityType="Entidade.Categoria" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidade.Contato" Width="1.5" PointX="0.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidade.Erro" Width="1.5" PointX="3.375" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidade.Log" Width="1.5" PointX="0.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidade.Post" Width="1.5" PointX="5.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidade.Texto" Width="1.5" PointX="8.125" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entidade.Usuario" Width="1.5" PointX="3.25" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="Entidade.Post_Categoria" ManuallyRouted="false" />
+        <AssociationConnector Association="Entidade.Usuario_Log" ManuallyRouted="false" />
+        <AssociationConnector Association="Entidade.Post_Usuario" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Entidade.Anexo" Width="1.5" PointX="8.25" PointY="1.25" />
+        <AssociationConnector Association="Entidade.Anexo_Post" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

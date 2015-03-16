@@ -1,0 +1,19 @@
+.tooltipster-light {
+	border-radius: 5px; 
+	border: 1px solid #cccccc;
+	background: #ededed;
+	color: #666666;
+}
+.tooltipster-light .tooltipster-content {
+	font-family: 'Lobster', cursive;
+	font-size: 22px;
+	line-height: 20px;
+	padding: 8px 10px;
+    text-align: center;
+}
+
+    .tooltipster-light .tooltipster-content strong
+    {
+        font-family: 'Bold';
+        font-weight: normal;
+    }

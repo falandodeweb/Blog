@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Entidade" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="Conexao" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categoria" EntityType="Entidade.Categoria" />
+    <EntitySet Name="Contato" EntityType="Entidade.Contato" />
+    <EntitySet Name="Erro" EntityType="Entidade.Erro" />
+    <EntitySet Name="Log" EntityType="Entidade.Log" />
+    <EntitySet Name="Post" EntityType="Entidade.Post" />
+    <EntitySet Name="Texto" EntityType="Entidade.Texto" />
+    <EntitySet Name="Usuario" EntityType="Entidade.Usuario" />
+    <AssociationSet Name="Post_Categoria" Association="Entidade.Post_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="Usuario_Log" Association="Entidade.Usuario_Log">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+    <AssociationSet Name="Post_Usuario" Association="Entidade.Post_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <EntitySet Name="Anexo" EntityType="Entidade.Anexo" />
+    <AssociationSet Name="Anexo_Post" Association="Entidade.Anexo_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Anexo" EntitySet="Anexo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Post" Relationship="Entidade.Post_Categoria" FromRole="Categoria" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Contato">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="Int32" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Telefone" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Mensagem" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Enviado" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Erro">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <Property Name="Mensagem" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="InnerException" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Navegador" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="IP" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario" Type="Int32" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <Property Name="Acao" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Usuario1" Relationship="Entidade.Usuario_Log" FromRole="Log" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria" Type="Int32" Nullable="false" />
+    <Property Name="Usuario" Type="Int32" Nullable="false" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <Property Name="DataPublicacao" Type="DateTime" Nullable="false" />
+    <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Subtitulo" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="Previa" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="Texto" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+    <Property Name="Tag" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="Fonte" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="Aprovado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Categoria1" Relationship="Entidade.Post_Categoria" FromRole="Post" ToRole="Categoria" />
+    <NavigationProperty Name="Usuario1" Relationship="Entidade.Post_Usuario" FromRole="Post" ToRole="Usuario" />
+    <NavigationProperty Name="Anexo" Relationship="Entidade.Anexo_Post" FromRole="Post" ToRole="Anexo" />
+  </EntityType>
+  <EntityType Name="Texto">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Conteudo" Type="String" Nullable="false" MaxLength="65535" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataCadastro" Type="DateTime" Nullable="false" />
+    <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Senha" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Ativo" Type="Boolean" Nullable="false" />
+    <Property Name="Master" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Log" Relationship="Entidade.Usuario_Log" FromRole="Usuario" ToRole="Log" />
+    <NavigationProperty Name="Post" Relationship="Entidade.Post_Usuario" FromRole="Usuario" ToRole="Post" />
+  </EntityType>
+  <Association Name="Post_Categoria">
+    <End Role="Categoria" Type="Entidade.Categoria" Multiplicity="1" />
+    <End Role="Post" Type="Entidade.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="Categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Usuario_Log">
+    <End Role="Usuario" Type="Entidade.Usuario" Multiplicity="1" />
+    <End Role="Log" Type="Entidade.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Post_Usuario">
+    <End Role="Usuario" Type="Entidade.Usuario" Multiplicity="1" />
+    <End Role="Post" Type="Entidade.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Anexo">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Type="Int32" Name="Codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Post" Nullable="false" />
+    <Property Type="String" Name="Titulo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Link" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Post1" Relationship="Entidade.Anexo_Post" FromRole="Anexo" ToRole="Post" />
+  </EntityType>
+  <Association Name="Anexo_Post">
+    <End Type="Entidade.Post" Role="Post" Multiplicity="1" />
+    <End Type="Entidade.Anexo" Role="Anexo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Anexo">
+        <PropertyRef Name="Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

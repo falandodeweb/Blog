@@ -1,0 +1,25 @@
+﻿@using Falando_de_web.Models.Entidade
+@{ 
+    var post = (Post)ViewBag.Post;
+    var anexo = post.Anexo.ToList();
+}
+
+<article class="row">
+    @Html.Raw(post.Texto)
+
+    @if(anexo.Count > 0)
+    {
+        <section class="well">
+            <h4>Arquivos para download:</h4>
+            <ul class="ul-anexo">
+                @foreach(var a in anexo)
+                {
+                    <li><i class="fa fa-external-link"></i> <a href="@a.Link" target="_blank">@a.Titulo</a></li>
+                }
+            </ul>
+        </section>
+    }
+</article>
+<hr />
+<div class="fb-comments" data-href="http://www.falandodeweb.com.br/post/@post.Codigo" data-width="100%" data-numposts="10" data-colorscheme="light" data-order_by="reverse_time">
+</div>

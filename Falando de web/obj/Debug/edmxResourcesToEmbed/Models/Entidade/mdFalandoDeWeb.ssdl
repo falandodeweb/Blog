@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Entidade.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EntidadeStoreContainer">
+    <EntitySet Name="Anexo" EntityType="Entidade.Store.Anexo" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Categoria" EntityType="Entidade.Store.Categoria" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Contato" EntityType="Entidade.Store.Contato" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Erro" EntityType="Entidade.Store.Erro" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Log" EntityType="Entidade.Store.Log" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Post" EntityType="Entidade.Store.Post" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Texto" EntityType="Entidade.Store.Texto" store:Type="Tables" Schema="falandodeweb" />
+    <EntitySet Name="Usuario" EntityType="Entidade.Store.Usuario" store:Type="Tables" Schema="falandodeweb" />
+    <AssociationSet Name="Anexo_Post" Association="Entidade.Store.Anexo_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Anexo" EntitySet="Anexo" />
+    </AssociationSet>
+    <AssociationSet Name="Post_Categoria" Association="Entidade.Store.Post_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="Post_Usuario" Association="Entidade.Store.Post_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="Usuario_Log" Association="Entidade.Store.Usuario_Log">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Log" EntitySet="Log" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Anexo">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Post" Type="int" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Extensao" Type="varchar" Nullable="false" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Contato">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="int" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Telefone" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Mensagem" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Enviado" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Erro">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="Mensagem" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="InnerException" Type="varchar" MaxLength="500" />
+    <Property Name="Navegador" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="URL" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="IP" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Usuario" Type="int" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="Acao" Type="varchar" Nullable="false" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Categoria" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="int" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="DataPublicacao" Type="datetime" Nullable="false" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Subtitulo" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="Previa" Type="text" Nullable="false" />
+    <Property Name="Texto" Type="text" Nullable="false" />
+    <Property Name="Tag" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="Fonte" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Aprovado" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Texto">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Conteudo" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+    <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Senha" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Ativo" Type="bool" Nullable="false" />
+    <Property Name="Master" Type="bool" Nullable="false" />
+  </EntityType>
+  <Association Name="Anexo_Post">
+    <End Role="Post" Type="Entidade.Store.Post" Multiplicity="1" />
+    <End Role="Anexo" Type="Entidade.Store.Anexo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Anexo">
+        <PropertyRef Name="Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Post_Categoria">
+    <End Role="Categoria" Type="Entidade.Store.Categoria" Multiplicity="1" />
+    <End Role="Post" Type="Entidade.Store.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="Categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Post_Usuario">
+    <End Role="Usuario" Type="Entidade.Store.Usuario" Multiplicity="1" />
+    <End Role="Post" Type="Entidade.Store.Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Usuario_Log">
+    <End Role="Usuario" Type="Entidade.Store.Usuario" Multiplicity="1" />
+    <End Role="Log" Type="Entidade.Store.Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Log">
+        <PropertyRef Name="Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
